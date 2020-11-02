@@ -1,0 +1,35 @@
+<template class="task-template">
+  <section id="python-runner-section" class="section js-section u-category-media">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
+          Run a Python programm
+        </h1>
+        <h3>The following <code>Demo</code> will run a Python program as described <a href="https://www.ahmedbouchefra.com/connect-python-3-electron-nodejs-build-desktop-apps/">here</a>.</h3>
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="print-pdf-demo-toggle" class="js-container-target demo-toggle-button">Run the Python program
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <h1>Simple Python Calculator!</h1>
+            <p>Input something like <code>1 + 1</code>.</p>
+            <input id="input" value="1 + 1"></input>
+            <input id="btn" type="button" value="Send to Python!"></input>
+            </br>
+            Got <span id="result"></span>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/python/sendToPython.js')
+    </script>
+
+  </section>
+</template>
